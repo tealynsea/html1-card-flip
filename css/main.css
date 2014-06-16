@@ -14,22 +14,23 @@
 }
 
 .front {
-	position: relative;
-	opacity: 1;	
+	position: absolute;
+	transition: 1s;
 }
 
 .back {
-	position: absolute; 
-	top: 0px; 
-	left: 0px;
-	opacity: 0;
-	transition: opacity 2s;
+	 
+	 -webkit-transform: rotateY(180deg);
+	 -webkit-backface-visibility: hidden;
+	 transition: 1s;
 	 
 }
 
 
+.portfolio-item:hover .front {
+  -webkit-transform: rotateY(180deg);
+}
+ 
 .portfolio-item:hover .back {
-  
-opacity: 1;
-transform: rotate(180deg);
+	-webkit-transform: rotateY(0deg);
 }
